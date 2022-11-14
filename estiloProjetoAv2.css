@@ -1,0 +1,121 @@
+/* ALGUMAS PROPRIEDADES GERAIS ou globais */
+body {
+    background-color: rgb(62, 91, 146); 
+}/* personalização padrão do body */
+
+.imagem {
+    float: right;
+}
+
+/* AQUI VAI A PARTER DE PERSONALIZAÇÃO DE BOXES */
+
+
+.caixa {
+    background-color: white;
+    box-shadow: 2px 2px 2px rgb(61, 61, 61);
+    padding: 20px;
+    padding-bottom: 40px;
+    border-radius: 6px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 3px solid #f1f1f1;
+}/* Boxes comuns */
+
+
+
+/* AQUI VÃO OS BOTÕES */
+
+
+.botao {
+    background-color: #555;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+}/* Botões comuns terão essas propriedades */
+
+.botao:active {
+    opacity: 1;
+}/* Propriedade ao clicar no botão básico */
+
+.colorido:hover {
+    opacity: 1;
+}/* Propriedade para embelezar botões coloridos */
+
+.navegador {
+    background-color: rgb(102, 193, 235);
+    border-radius: 6px;
+}/* Propriedades para os botões da barra de navegação */
+
+.verde {
+    background-color: #04AA6D;
+}/* Botão de confirmação */
+
+.vermelho {
+    background-color: red;
+}/* Botão de negação */
+
+
+/* ESTRUTUA DA PAGINA 1 */
+
+
+.pag1{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    grid-template-areas:
+        "header header"
+        "artigo1 sidebar"
+        "artigo2 sidebar"
+        "footer footer";
+    grid-gap:10px;
+  }
+  #mastheader{grid-area:header;}
+  #art1{grid-area:artigo1;}
+  #art2{grid-area:artigo2;min-height:500px;}
+  #sidebar{grid-area:sidebar;}
+  #footer{grid-area:footer;}
+
+
+/* ESTRUTUA DA PAGINA 2 */
+
+
+.pag2{
+    display:grid;
+    grid-template-areas:
+        "header"
+        "formulario"
+        "footer";
+    grid-gap:10px;
+  }
+  #mastheader{grid-area:header;}
+  #formulario{grid-area:formulario;min-height:500px;}
+  #footer{grid-area:footer;}
+
+
+/* ESTRUTUA DA PAGINA 3 */
+
+
+.pag3{
+    display:grid;
+    grid-template-areas:
+        "header header header header"
+        "sig1 sig2 sig3 sig4"
+        "sig5 sig6 sig7 sig8"
+        "sig9 sig10 sig11 sig12"
+        "footer footer footer footer";
+    grid-gap:10px;
+  }
+  #mastheader{grid-area:header;}
+  #sig1{grid-area:sig1;}
+  #sig2{grid-area:sig2;}
+  #sig3{grid-area:sig3;}
+  #sig4{grid-area:sig4;}
+  #sig5{grid-area:sig5;}
+  #sig6{grid-area:sig6;}
+  #sig7{grid-area:sig7;}
+  #sig8{grid-area:sig8;}
+  #sig9{grid-area:sig9;}
+  #sig10{grid-area:sig10;}
+  #sig11{grid-area:sig11;}
+  #sig12{grid-area:sig12;}
+  #footer{grid-area:footer;}
