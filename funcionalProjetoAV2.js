@@ -15,12 +15,10 @@ function dataN() {
     const nome = document.getElementById("nome").value;     //Nome do usuário
     const calend = document.getElementById("data").value;    //dia fornecido
     const hora = document.getElementById("hora").value;     //hora fornecida
-    const genero = document.getElementById("genero").value;     //genero do usuario
     let signo;
     let astro;
     let momento;
     let ascend;
-    let surp;
 
     //inicio de cada signo
     const iniAri = ('2022-03-21');
@@ -543,21 +541,5 @@ function dataN() {
             }
         }
     }
-    
-    //fator surpresa
-    if (genero==1) {
-        surp='surpreso?';
-    } else {
-        if (genero==2) {
-            surp='surpresa?';
-        } else {
-            surp='surprese?';
-        }
-    }
-    //Apresentando o resultado na tela
-    if((genero == 0)||(genero == 4)) {
-        document.getElementById("resultado").innerHTML = "<p>Olá, "+nome+"! Seu signo é "+signo+", seu ascendente é "+ascend+" e seu astro é "+astro+".<p>";
-    } else {
-        document.getElementById("resultado").innerHTML = "<p>Olá, "+nome+"! Seu signo é "+signo+", seu ascendente é "+ascend+" e seu astro é "+astro+", "+surp+"<p>";
-    }
+    document.getElementById("resultado").innerHTML = "<p>Olá, "+nome+"! Seu signo é "+signo+", seu ascendente é "+ascend+" e seu astro é "+astro+".<p>";
 }   //calculadora de signo

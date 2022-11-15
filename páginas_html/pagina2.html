@@ -28,13 +28,6 @@
                 <p>Digite seu nome: <input  type="text" size="20" id="nome" value="Nome" onfocus="limpaCampo(1);"></p>
                 <p>Digite seu dia de aniversário: <input  type="date" size="20" id="data" value="Data de aniv." min="2022-01-01" max="2022-12-31" onfocus="limpaCampo(2);" required></p>
                 <p>Digite sua hora de nascimento: <input  type="time" size="20" id="hora" value="Hora de nasc." onfocus="limpaCampo(3);" required></p>
-                <select name="genero" id="genero">
-                    <option value="0">N/A</option>
-                    <option value="1">Masc.</option>
-                    <option value="2">Fem.</option>
-                    <option value="3">Neutro</option>
-                    <option value="4">Prefiro não dizer</option>
-                </select>
                 <button class="botao colorido" onclick="dataN()">Calcular signo</button> 
                 <p id="retornadoDH"></p>
                 <p id="resultado"></p>
