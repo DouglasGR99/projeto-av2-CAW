@@ -1,24 +1,63 @@
 /* ALGUMAS PROPRIEDADES GERAIS ou globais */
 body {
-    background-color: rgb(62, 91, 146); 
+    background-color: #251B37; 
 }/* personalização padrão do body */
 
-.imagem {
-    float: right;
+.logoMain {
+    height: 120px;
 }
+
+.logo {
+    max-height: 60px;
+}
+
+.foto {
+    max-height: 200px;
+    float: center;
+}
+
+.imagem {
+    min-height: 20px;
+    min-width: 20px;
+    max-height: 100px;
+    max-width: 100px;
+}
+
+.anuncio {
+    height: 128px;
+}
+
+.texto {
+    text-align: start;
+    padding: 30px;
+    padding-top: 0px;
+}
+
+.faleConosco {
+    float: left;
+}
+
 
 /* AQUI VAI A PARTER DE PERSONALIZAÇÃO DE BOXES */
 
 
 .caixa {
-    background-color: white;
+    background-color: #FFECEF;
     box-shadow: 2px 2px 2px rgb(61, 61, 61);
     padding: 20px;
     padding-bottom: 40px;
     border-radius: 6px;
     font-family: Arial, Helvetica, sans-serif;
     border: 3px solid #f1f1f1;
+    text-align: center;
 }/* Boxes comuns */
+
+.titulo {
+    border-radius: 6px;
+    background-color: #FFCACA;
+    color: rgb(61, 35, 53);
+    padding: 5px;
+}
 
 
 
@@ -32,6 +71,7 @@ body {
     border: none;
     cursor: pointer;
     opacity: 0.8;
+    text-decoration: none;
 }/* Botões comuns terão essas propriedades */
 
 .botao:active {
@@ -43,25 +83,41 @@ body {
 }/* Propriedade para embelezar botões coloridos */
 
 .navegador {
-    background-color: rgb(102, 193, 235);
+    background-color: rgb(235, 200, 45);
+    color: #3f3415;
     border-radius: 6px;
 }/* Propriedades para os botões da barra de navegação */
 
-.verde {
+.confirm {
     background-color: #04AA6D;
+    border-radius: 6px;
 }/* Botão de confirmação */
 
-.vermelho {
-    background-color: red;
-}/* Botão de negação */
+
+
+/* ESTRUTURAS DE GRID GLOBAIS */
+
+#mastheader {
+    grid-area:header;
+    text-align: left;
+    background-color: #806b9b;
+    border-color: #806b9b;
+    color: rgb(255, 255, 255);
+    font-size: 21px;
+}
+#footer {
+    grid-area:footer;bottom: 0;
+    text-align: right;
+    background-color: #372948;
+    border-color: #372948;
+}
 
 
 /* ESTRUTUA DA PAGINA 1 */
 
-
-.pag1{
+.pag1 {
     display:grid;
-    grid-template-columns:2fr 1fr;
+    grid-template-columns:5fr 1fr;
     grid-template-areas:
         "header header"
         "artigo1 sidebar"
@@ -69,17 +125,15 @@ body {
         "footer footer";
     grid-gap:10px;
   }
-  #mastheader{grid-area:header;}
-  #art1{grid-area:artigo1;}
-  #art2{grid-area:artigo2;min-height:500px;}
-  #sidebar{grid-area:sidebar;}
-  #footer{grid-area:footer;}
+
+  #art1{grid-area:artigo1;min-height: 300px; margin: 20px;}
+  #art2{grid-area:artigo2;min-height:300px; margin: 20px; margin-top: 0px;}
+  #sidebar{grid-area:sidebar;background-color: #372948;border-color: #372948;color: #f1f1f1;}
 
 
 /* ESTRUTUA DA PAGINA 2 */
 
-
-.pag2{
+.pag2 {
     display:grid;
     grid-template-areas:
         "header"
@@ -87,15 +141,18 @@ body {
         "footer";
     grid-gap:10px;
   }
-  #mastheader{grid-area:header;}
-  #formulario{grid-area:formulario;min-height:500px;}
-  #footer{grid-area:footer;}
 
+  #formulario {
+    grid-area:formulario;
+    justify-self: center;
+    margin-bottom: 150px;
+    margin-top: 15px;
+  }
+ 
 
 /* ESTRUTUA DA PAGINA 3 */
 
-
-.pag3{
+.pag3 {
     display:grid;
     grid-template-areas:
         "header header header header"
@@ -105,7 +162,13 @@ body {
         "footer footer footer footer";
     grid-gap:10px;
   }
-  #mastheader{grid-area:header;}
+
+  .signada {
+    margin: 5%;
+    margin-bottom: 15px;
+    max-width: 100%;
+  }
+
   #sig1{grid-area:sig1;}
   #sig2{grid-area:sig2;}
   #sig3{grid-area:sig3;}
@@ -118,4 +181,22 @@ body {
   #sig10{grid-area:sig10;}
   #sig11{grid-area:sig11;}
   #sig12{grid-area:sig12;}
-  #footer{grid-area:footer;}
+
+  /* sumário */
+  details > summary {
+    padding: 4px;
+    width: 200px;
+    background-color: #FFCACA;
+    border: none;
+    box-shadow: 1px 1px 2px #ffcacb;
+    cursor: pointer;
+    color: rgb(61, 35, 53);
+  }
+  
+  details > p {
+    background-color: #FFCACA;
+    padding: 4px;
+    margin: 0;
+    box-shadow: 1px 1px 2px #ffcacb;
+    color: rgb(61, 35, 53);
+  }

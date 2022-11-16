@@ -50,8 +50,8 @@ function dataN() {
     const hora10 = ('00:00');
     const hora11 = ('02:00');
     const hora12 = ('04:00');
-    //const animais = ["abelha", "barata", "cavalo", "dalmata"];
-    //document.getElementById("retornado").innerHTML = "<p>"+animais[posi]+"<p>";
+    //o caso final
+    const horaFinal = ('23:59')
     document.getElementById("retornadoDH").innerHTML = "<p>Data: "+calend+". Hora: "+hora+"<p>";
 
 
@@ -117,19 +117,19 @@ function dataN() {
                                         }
                                         if ((calend>=iniAno)&&(calend<iniAqu)) {
                                             const capricornio = 'capricórnio';
-                                            astro = 'Urano';
+                                            astro = 'Saturno';
                                             signo=capricornio;
                                         }    //capricornio (do final e começo do ano)
                                         else {
                                             if ((calend>=iniAqu)&&(calend<iniPei)) {
                                                 const aquario = 'aquário';
-                                                astro = 'Netuno';
+                                                astro = 'Urano';
                                                 signo=aquario;
                                             }    //aquario
                                             else {
                                                 if ((calend>=iniPei)&&(calend<iniAri)) {
                                                     const peixes = 'peixes';
-                                                    astro = '';
+                                                    astro = 'Netuno';
                                                     signo=peixes;
                                                 }    //peixes
                                             }
@@ -169,7 +169,7 @@ function dataN() {
                                 if ((hora>=hora8)&&(hora<hora9)) {
                                     momento = 8;
                                 } else {
-                                    if ((hora>=hora9)&&(hora<hora10)) {
+                                    if ((hora>=hora9)&&(hora<horaFinal)) {
                                         momento = 9;
                                     } else {
                                         if ((hora>=hora10)&&(hora<hora11)) {
@@ -196,338 +196,194 @@ function dataN() {
     //calculando ascendente
     if (signo == 'áries') {
         switch (momento) {
-            case 1: ascend = 'áries';
-                break;
-            case 2: ascend = 'touro';
-                break;
-            case 3: ascend = 'gêmeos';
-                break;
-            case 4: ascend = 'câncer';
-                break;
-            case 5: ascend = 'leão';
-                break;
-            case 6: ascend = 'virgem';
-                break;
-            case 7: ascend = 'libra';
-                break;
-            case 8: ascend = 'escorpião';
-                break;
-            case 9: ascend = 'sagitário';
-                break;
-            case 10: ascend = 'capricórnio';
-                break;
-            case 11: ascend = 'aquário';
-                break;
-            case 12: ascend = 'peixes';
-                break;
+            case 1: ascend = 'áries';break;
+            case 2: ascend = 'touro';break;
+            case 3: ascend = 'gêmeos';break;
+            case 4: ascend = 'câncer';break;
+            case 5: ascend = 'leão';break;
+            case 6: ascend = 'virgem';break;
+            case 7: ascend = 'libra';break;
+            case 8: ascend = 'escorpião';break;
+            case 9: ascend = 'sagitário';break;
+            case 10: ascend = 'capricórnio';break;
+            case 11: ascend = 'aquário';break;
+            case 12: ascend = 'peixes';break;
         }
     } else {
         if (signo == 'touro') {
             switch (momento) {
-                case 1: ascend = 'áries';
-                    break;
-                case 2: ascend = 'touro';
-                    break;
-                case 3: ascend = 'gêmeos';
-                    break;
-                case 4: ascend = 'câncer';
-                    break;
-                case 5: ascend = 'leão';
-                    break;
-                case 6: ascend = 'virgem';
-                    break;
-                case 7: ascend = 'libra';
-                    break;
-                case 8: ascend = 'escorpião';
-                    break;
-                case 9: ascend = 'sagitário';
-                    break;
-                case 10: ascend = 'capricórnio';
-                    break;
-                case 11: ascend = 'aquário';
-                    break;
-                case 12: ascend = 'peixes';
-                    break;
+                case 12: ascend = 'áries';break;
+                case 1: ascend = 'touro';break;
+                case 2: ascend = 'gêmeos';break;
+                case 3: ascend = 'câncer';break;
+                case 4: ascend = 'leão';break;
+                case 5: ascend = 'virgem';break;
+                case 6: ascend = 'libra';break;
+                case 7: ascend = 'escorpião';break;
+                case 8: ascend = 'sagitário';break;
+                case 9: ascend = 'capricórnio';break;
+                case 10: ascend = 'aquário';break;
+                case 11: ascend = 'peixes';break;
             }
         } else {
             if (signo == 'gêmeos') {
                 switch (momento) {
-                    case 1: ascend = 'áries';
-                        break;
-                    case 2: ascend = 'touro';
-                        break;
-                    case 3: ascend = 'gêmeos';
-                        break;
-                    case 4: ascend = 'câncer';
-                        break;
-                    case 5: ascend = 'leão';
-                        break;
-                    case 6: ascend = 'virgem';
-                        break;
-                    case 7: ascend = 'libra';
-                        break;
-                    case 8: ascend = 'escorpião';
-                        break;
-                    case 9: ascend = 'sagitário';
-                        break;
-                    case 10: ascend = 'capricórnio';
-                        break;
-                    case 11: ascend = 'aquário';
-                        break;
-                    case 12: ascend = 'peixes';
-                        break;
+                    case 11: ascend = 'áries';break;
+                    case 12: ascend = 'touro';break;
+                    case 1: ascend = 'gêmeos';break;
+                    case 2: ascend = 'câncer';break;
+                    case 3: ascend = 'leão';break;
+                    case 4: ascend = 'virgem';break;
+                    case 5: ascend = 'libra';break;
+                    case 6: ascend = 'escorpião';break;
+                    case 7: ascend = 'sagitário';break;
+                    case 8: ascend = 'capricórnio';break;
+                    case 9: ascend = 'aquário';break;
+                    case 10: ascend = 'peixes';break;
                 }
             } else {
                 if (signo == 'câncer') {
                     switch (momento) {
-                        case 1: ascend = 'áries';
-                            break;
-                        case 2: ascend = 'touro';
-                            break;
-                        case 3: ascend = 'gêmeos';
-                            break;
-                        case 4: ascend = 'câncer';
-                            break;
-                        case 5: ascend = 'leão';
-                            break;
-                        case 6: ascend = 'virgem';
-                            break;
-                        case 7: ascend = 'libra';
-                            break;
-                        case 8: ascend = 'escorpião';
-                            break;
-                        case 9: ascend = 'sagitário';
-                            break;
-                        case 10: ascend = 'capricórnio';
-                            break;
-                        case 11: ascend = 'aquário';
-                            break;
-                        case 12: ascend = 'peixes';
-                            break;
+                        case 10: ascend = 'áries';break;
+                        case 11: ascend = 'touro';break;
+                        case 12: ascend = 'gêmeos';break;
+                        case 1: ascend = 'câncer';break;
+                        case 2: ascend = 'leão';break;
+                        case 3: ascend = 'virgem';break;
+                        case 4: ascend = 'libra';break;
+                        case 5: ascend = 'escorpião';break;
+                        case 6: ascend = 'sagitário';break;
+                        case 7: ascend = 'capricórnio';break;
+                        case 8: ascend = 'aquário';break;
+                        case 9: ascend = 'peixes';break;
                     }
                 } else {
                     if (signo == 'leão') {
                         switch (momento) {
-                            case 1: ascend = 'áries';
-                                break;
-                            case 2: ascend = 'touro';
-                                break;
-                            case 3: ascend = 'gêmeos';
-                                break;
-                            case 4: ascend = 'câncer';
-                                break;
-                            case 5: ascend = 'leão';
-                                break;
-                            case 6: ascend = 'virgem';
-                                break;
-                            case 7: ascend = 'libra';
-                                break;
-                            case 8: ascend = 'escorpião';
-                                break;
-                            case 9: ascend = 'sagitário';
-                                break;
-                            case 10: ascend = 'capricórnio';
-                                break;
-                            case 11: ascend = 'aquário';
-                                break;
-                            case 12: ascend = 'peixes';
-                                break;
+                            case 9: ascend = 'áries';break;
+                            case 10: ascend = 'touro';break;
+                            case 11: ascend = 'gêmeos';break;
+                            case 12: ascend = 'câncer';break;
+                            case 1: ascend = 'leão';break;
+                            case 2: ascend = 'virgem';break;
+                            case 3: ascend = 'libra';break;
+                            case 4: ascend = 'escorpião';break;
+                            case 5: ascend = 'sagitário';break;
+                            case 6: ascend = 'capricórnio';break;
+                            case 7: ascend = 'aquário';break;
+                            case 8: ascend = 'peixes';break;
                         }
                     } else {
                         if (signo == 'virgem') {
                             switch (momento) {
-                                case 1: ascend = 'áries';
-                                    break;
-                                case 2: ascend = 'touro';
-                                    break;
-                                case 3: ascend = 'gêmeos';
-                                    break;
-                                case 4: ascend = 'câncer';
-                                    break;
-                                case 5: ascend = 'leão';
-                                    break;
-                                case 6: ascend = 'virgem';
-                                    break;
-                                case 7: ascend = 'libra';
-                                    break;
-                                case 8: ascend = 'escorpião';
-                                    break;
-                                case 9: ascend = 'sagitário';
-                                    break;
-                                case 10: ascend = 'capricórnio';
-                                    break;
-                                case 11: ascend = 'aquário';
-                                    break;
-                                case 12: ascend = 'peixes';
-                                    break;
+                                case 8: ascend = 'áries';break;
+                                case 9: ascend = 'touro';break;
+                                case 10: ascend = 'gêmeos';break;
+                                case 11: ascend = 'câncer';break;
+                                case 12: ascend = 'leão';break;
+                                case 1: ascend = 'virgem';break;
+                                case 2: ascend = 'libra';break;
+                                case 3: ascend = 'escorpião';break;
+                                case 4: ascend = 'sagitário';break;
+                                case 5: ascend = 'capricórnio';break;
+                                case 6: ascend = 'aquário';break;
+                                case 7: ascend = 'peixes';break;
                             }
                         } else {
                             if (signo == 'libra') {
                                 switch (momento) {
-                                    case 1: ascend = 'áries';
-                                        break;
-                                    case 2: ascend = 'touro';
-                                        break;
-                                    case 3: ascend = 'gêmeos';
-                                        break;
-                                    case 4: ascend = 'câncer';
-                                        break;
-                                    case 5: ascend = 'leão';
-                                        break;
-                                    case 6: ascend = 'virgem';
-                                        break;
-                                    case 7: ascend = 'libra';
-                                        break;
-                                    case 8: ascend = 'escorpião';
-                                        break;
-                                    case 9: ascend = 'sagitário';
-                                        break;
-                                    case 10: ascend = 'capricórnio';
-                                        break;
-                                    case 11: ascend = 'aquário';
-                                        break;
-                                    case 12: ascend = 'peixes';
-                                        break;
+                                    case 7: ascend = 'áries';break;
+                                    case 8: ascend = 'touro';break;
+                                    case 9: ascend = 'gêmeos';break;
+                                    case 10: ascend = 'câncer';break;
+                                    case 11: ascend = 'leão';break;
+                                    case 12: ascend = 'virgem';break;
+                                    case 1: ascend = 'libra';break;
+                                    case 2: ascend = 'escorpião';break;
+                                    case 3: ascend = 'sagitário';break;
+                                    case 4: ascend = 'capricórnio';break;
+                                    case 5: ascend = 'aquário';break;
+                                    case 6: ascend = 'peixes';break;
                                 }
                             } else {
                                 if (signo == 'escorpião') {
                                     switch (momento) {
-                                        case 1: ascend = 'áries';
-                                            break;
-                                        case 2: ascend = 'touro';
-                                            break;
-                                        case 3: ascend = 'gêmeos';
-                                            break;
-                                        case 4: ascend = 'câncer';
-                                            break;
-                                        case 5: ascend = 'leão';
-                                            break;
-                                        case 6: ascend = 'virgem';
-                                            break;
-                                        case 7: ascend = 'libra';
-                                            break;
-                                        case 8: ascend = 'escorpião';
-                                            break;
-                                        case 9: ascend = 'sagitário';
-                                            break;
-                                        case 10: ascend = 'capricórnio';
-                                            break;
-                                        case 11: ascend = 'aquário';
-                                            break;
-                                        case 12: ascend = 'peixes';
-                                            break;
+                                        case 6: ascend = 'áries';break;
+                                        case 7: ascend = 'touro';break;
+                                        case 8: ascend = 'gêmeos';break;
+                                        case 9: ascend = 'câncer';break;
+                                        case 10: ascend = 'leão';break;
+                                        case 11: ascend = 'virgem';break;
+                                        case 12: ascend = 'libra';break;
+                                        case 1: ascend = 'escorpião';break;
+                                        case 2: ascend = 'sagitário';break;
+                                        case 3: ascend = 'capricórnio';break;
+                                        case 4: ascend = 'aquário';break;
+                                        case 5: ascend = 'peixes';break;
                                     }
                                 } else {
                                     if (signo == 'sagitário') {
                                         switch (momento) {
-                                            case 1: ascend = 'áries';
-                                                break;
-                                            case 2: ascend = 'touro';
-                                                break;
-                                            case 3: ascend = 'gêmeos';
-                                                break;
-                                            case 4: ascend = 'câncer';
-                                                break;
-                                            case 5: ascend = 'leão';
-                                                break;
-                                            case 6: ascend = 'virgem';
-                                                break;
-                                            case 7: ascend = 'libra';
-                                                break;
-                                            case 8: ascend = 'escorpião';
-                                                break;
-                                            case 9: ascend = 'sagitário';
-                                                break;
-                                            case 10: ascend = 'capricórnio';
-                                                break;
-                                            case 11: ascend = 'aquário';
-                                                break;
-                                            case 12: ascend = 'peixes';
-                                                break;
+                                            case 5: ascend = 'áries';break;
+                                            case 6: ascend = 'touro';break;
+                                            case 7: ascend = 'gêmeos';break;
+                                            case 8: ascend = 'câncer';break;
+                                            case 9: ascend = 'leão';break;
+                                            case 10: ascend = 'virgem';break;
+                                            case 11: ascend = 'libra';break;
+                                            case 12: ascend = 'escorpião';break;
+                                            case 1: ascend = 'sagitário';break;
+                                            case 2: ascend = 'capricórnio';break;
+                                            case 3: ascend = 'aquário';break;
+                                            case 4: ascend = 'peixes';break;
                                         }
                                     } else {
                                         if (signo == 'capricórnio') {
                                             switch (momento) {
-                                                case 1: ascend = 'áries';
-                                                    break;
-                                                case 2: ascend = 'touro';
-                                                    break;
-                                                case 3: ascend = 'gêmeos';
-                                                    break;
-                                                case 4: ascend = 'câncer';
-                                                    break;
-                                                case 5: ascend = 'leão';
-                                                    break;
-                                                case 6: ascend = 'virgem';
-                                                    break;
-                                                case 7: ascend = 'libra';
-                                                    break;
-                                                case 8: ascend = 'escorpião';
-                                                    break;
-                                                case 9: ascend = 'sagitário';
-                                                    break;
-                                                case 10: ascend = 'capricórnio';
-                                                    break;
-                                                case 11: ascend = 'aquário';
-                                                    break;
-                                                case 12: ascend = 'peixes';
-                                                    break;
+                                                case 4: ascend = 'áries';break;
+                                                case 5: ascend = 'touro';break;
+                                                case 6: ascend = 'gêmeos';break;
+                                                case 7: ascend = 'câncer';break;
+                                                case 8: ascend = 'leão';break;
+                                                case 9: ascend = 'virgem';break;
+                                                case 10: ascend = 'libra';break;
+                                                case 11: ascend = 'escorpião';break;
+                                                case 12: ascend = 'sagitário';break;
+                                                case 1: ascend = 'capricórnio';break;
+                                                case 2: ascend = 'aquário';break;
+                                                case 3: ascend = 'peixes';break;
                                             }
                                         } else {
                                             if (signo == 'aquário') {
                                                 switch (momento) {
-                                                    case 1: ascend = 'áries';
-                                                        break;
-                                                    case 2: ascend = 'touro';
-                                                        break;
-                                                    case 3: ascend = 'gêmeos';
-                                                        break;
-                                                    case 4: ascend = 'câncer';
-                                                        break;
-                                                    case 5: ascend = 'leão';
-                                                        break;
-                                                    case 6: ascend = 'virgem';
-                                                        break;
-                                                    case 7: ascend = 'libra';
-                                                        break;
-                                                    case 8: ascend = 'escorpião';
-                                                        break;
-                                                    case 9: ascend = 'sagitário';
-                                                        break;
-                                                    case 10: ascend = 'capricórnio';
-                                                        break;
-                                                    case 11: ascend = 'aquário';
-                                                        break;
-                                                    case 12: ascend = 'peixes';
-                                                        break;
+                                                    case 3: ascend = 'áries';break;
+                                                    case 4: ascend = 'touro';break;
+                                                    case 5: ascend = 'gêmeos';break;
+                                                    case 6: ascend = 'câncer';break;
+                                                    case 7: ascend = 'leão';break;
+                                                    case 8: ascend = 'virgem';break;
+                                                    case 9: ascend = 'libra';break;
+                                                    case 10: ascend = 'escorpião';break;
+                                                    case 11: ascend = 'sagitário';break;
+                                                    case 12: ascend = 'capricórnio';break;
+                                                    case 1: ascend = 'aquário';break;
+                                                    case 2: ascend = 'peixes';break;
                                                 }
                                             } else {
                                                 if (signo == 'peixes') {
                                                     switch (momento) {
-                                                        case 1: ascend = 'áries';
-                                                            break;
-                                                        case 2: ascend = 'touro';
-                                                            break;
-                                                        case 3: ascend = 'gêmeos';
-                                                            break;
-                                                        case 4: ascend = 'câncer';
-                                                            break;
-                                                        case 5: ascend = 'leão';
-                                                            break;
-                                                        case 6: ascend = 'virgem';
-                                                            break;
-                                                        case 7: ascend = 'libra';
-                                                            break;
-                                                        case 8: ascend = 'escorpião';
-                                                            break;
-                                                        case 9: ascend = 'sagitário';
-                                                            break;
-                                                        case 10: ascend = 'capricórnio';
-                                                            break;
-                                                        case 11: ascend = 'aquário';
-                                                            break;
-                                                        case 12: ascend = 'peixes';
-                                                            break;
+                                                        case 2: ascend = 'áries';break;
+                                                        case 3: ascend = 'touro';break;
+                                                        case 4: ascend = 'gêmeos';break;
+                                                        case 5: ascend = 'câncer';break;
+                                                        case 6: ascend = 'leão';break;
+                                                        case 7: ascend = 'virgem';break;
+                                                        case 8: ascend = 'libra';break;
+                                                        case 9: ascend = 'escorpião';break;
+                                                        case 10: ascend = 'sagitário';break;
+                                                        case 11: ascend = 'capricórnio';break;
+                                                        case 12: ascend = 'aquário';break;
+                                                        case 1: ascend = 'peixes';break;
                                                     }
                                                 }
                                             }

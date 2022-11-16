@@ -11,9 +11,10 @@
     <section class="pag2">
         <!--Cabeçalho-->
         <header id="mastheader" class="caixa">
+            <img align="left" src="../imagensProjeto/melhorLogo.png" alt="logo" class="logo">
             <h1>Formulário</h1>
             <!--Navegação-->
-            <nav>
+            <nav align="center">
                 <a href="pagina1.html" class="botao colorido navegador">Página inicial</a>
                 <a href="pagina3.html" class="botao colorido navegador">Signos</a>
             </nav>
@@ -22,13 +23,17 @@
 
         <!--Formulario-->
         <article id="formulario" class="caixa">
-            <p>1</p>
-            <form name="form" action="#">
-                <p>Retorna um valor armazenado</p>
+            <div class="titulo">
+                <h2>Descubra seu mapa astral</h2>
+            </div>
+            <br>
+            <p>(Não se esqueça de preencher data e hora.)</p>
+            <br><hr><br>
+            <form action="#" name="form">
                 <p>Digite seu nome: <input  type="text" size="20" id="nome" value="Nome" onfocus="limpaCampo(1);"></p>
                 <p>Digite seu dia de aniversário: <input  type="date" size="20" id="data" value="Data de aniv." min="2022-01-01" max="2022-12-31" onfocus="limpaCampo(2);" required></p>
                 <p>Digite sua hora de nascimento: <input  type="time" size="20" id="hora" value="Hora de nasc." onfocus="limpaCampo(3);" required></p>
-                <button class="botao colorido" onclick="dataN()">Calcular signo</button> 
+                <button class="botao colorido confirm" onclick="dataN()">Calcular signo</button> 
                 <p id="retornadoDH"></p>
                 <p id="resultado"></p>
             </form>
@@ -37,7 +42,8 @@
 
         <!--Rodapé-->
         <footer id="footer" class="caixa">
-            <p>footer aqui</p>
+            <a href="mailto:douglas.2210478300006@faeterj-rio.edu.br" class="botao colorido navegador faleConosco">Fale conosco!</a>
+            <a href="#mastheader" class="botao colorido navegador">Voltar ao topo</a>
         </footer>
     </section>
 </body>
